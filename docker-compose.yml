@@ -1,0 +1,12 @@
+version: '3'
+services:
+  payment-service:
+    container_name: payment-service-container
+    build: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      -  3000:3000
+   
+    env_file:
+      - ./.env
